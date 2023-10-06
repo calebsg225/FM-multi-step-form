@@ -5,6 +5,11 @@
 /.pnp
 .pnp.js
 
+# designs
+*.fig
+*.sketch
+*.xd
+
 # testing
 /coverage
 
@@ -13,6 +18,7 @@
 
 # misc
 .DS_Store
+.prettierignore
 .env.local
 .env.development.local
 .env.test.local
