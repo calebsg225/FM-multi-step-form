@@ -1,12 +1,12 @@
 import NavbarItem from "./NavbarItem"
 
 const NavBar = () => {
+
+  const navItemNames = ["your info", "select plan", "add-ons", "summary"];
+
   return (
     <div className="top-navigation">
-      <NavbarItem label="your info"/>
-      <NavbarItem label="select plan"/>
-      <NavbarItem label="add-ons"/>
-      <NavbarItem label="summary"/>
+      {navItemNames.map((label, index) => <NavbarItem label={label} order={index+1}/> )}
     </div>
   )
 }
