@@ -6,7 +6,11 @@ interface NavbarItemProps {
 const NavbarItem = ({label, order}: NavbarItemProps) => {
   return (
     <div className="NavbarItem">
-      <p>{label}{order}</p>
+      <div className="navItemIcon"></div>
+      <div className="navItemText">
+        <p>Step {order}</p>
+        <p>{label.toUpperCase()}</p>
+      </div>
     </div>
   )
 }
