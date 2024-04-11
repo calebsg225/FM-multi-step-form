@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar selectedSection={selectedSection} setSelectedSection={setSelectedSection}/>
+      <NavBar selectedSection={selectedSection} />
       <Form />
     </div>
   );
