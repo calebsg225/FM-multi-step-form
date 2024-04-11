@@ -1,17 +1,15 @@
 import NavBar from "./components/Navigation/NavBar";
-import Footer from "./components/Footer/Footer";
 import Form from "./components/Form/Form";
+import { useState } from "react";
 
 function App() {
+
+  const [ selectedSection, setSelectedSection ] = useState(1);
+
   return (
     <div className="App">
-      <main className="main-container">
-        <NavBar />
-        <div className="form-interaction-container">
-          <Form />
-          <Footer />
-        </div>
-      </main>
+      <NavBar selectedSection={selectedSection} setSelectedSection={setSelectedSection}/>
+      <Form />
     </div>
   );
 }

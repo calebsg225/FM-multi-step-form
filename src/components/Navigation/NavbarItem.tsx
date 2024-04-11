@@ -1,17 +1,18 @@
 interface NavbarItemProps {
   label: string;
   order: number;
+  isSelected: boolean;
 }
 
-const NavbarItem = ({label, order}: NavbarItemProps) => {
+const NavbarItem = ({label, order, isSelected}: NavbarItemProps) => {
   return (
-    <div className="NavbarItem">
+    <nav className="NavbarItem">
       <div className="navItemIcon"></div>
       <div className="navItemText">
         <p>Step {order}</p>
         <p>{label.toUpperCase()}</p>
       </div>
-    </div>
+    </nav>
   )
 }
 

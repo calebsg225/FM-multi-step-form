@@ -1,6 +1,11 @@
+import FormNav from "../Footer/FormNav";
+
 const Form = () => {
   return (
-    <section></section>
+    <main className="form-container">
+      <section className="upper-form-container"></section>
+      <FormNav />
+    </main>
   )
 }
 
