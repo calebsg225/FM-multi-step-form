@@ -2,7 +2,13 @@
 //    type of plan (toggle between selections)
 // **toggle between yearly and monthly plans here
 
-const PlanFormSection = () => {
+import { UseFormRegister } from "react-hook-form";
+
+interface PlanFormSectionProps {
+  register: UseFormRegister<{}>;
+}
+
+const PlanFormSection = ({register}: PlanFormSectionProps) => {
   return (
     <></>
   );

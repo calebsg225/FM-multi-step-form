@@ -4,7 +4,13 @@
 //    Email Address
 //    Phone Number
 
-const InfoFormSection = () => {
+import { UseFormRegister } from "react-hook-form";
+
+interface InfoFormSectionProps {
+  register: UseFormRegister<{}>;
+}
+
+const InfoFormSection = ({register}: InfoFormSectionProps) => {
   return (
     <div className="info-form-section-container">
       <input type="text" />

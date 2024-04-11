@@ -2,7 +2,13 @@
 //    additional services (checkbox)
 // ** should reflect monthly or yearly plan previously selected
 
-const AddOnFormSection = () => {
+import { UseFormRegister } from "react-hook-form";
+
+interface AddOnFormSectionProps {
+  register: UseFormRegister<{}>;
+}
+
+const AddOnFormSection = ({register}: AddOnFormSectionProps) => {
   return (
     <></>
   );
