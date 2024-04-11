@@ -4,7 +4,12 @@ import InfoFormSection from "./FormSections/InfoFormSection";
 import PlanFormSection from "./FormSections/PlanFormSection";
 import SummarySection from "./FormSections/SummarySection";
 
-const Form = () => {
+interface FormProps {
+  selectedSection: number;
+  setSelectedSection: (...args:any) => void;
+}
+
+const Form = ({ selectedSection, setSelectedSection }: FormProps) => {
   return (
     <main className="form-container">
       <form className="upper-form-container">
@@ -13,7 +18,7 @@ const Form = () => {
         <AddOnFormSection />
         <SummarySection />
       </form>
-      <FormNav />
+      <FormNav selectedSection={selectedSection} setSelectedSection={setSelectedSection}/>
     </main>
   )
 }
