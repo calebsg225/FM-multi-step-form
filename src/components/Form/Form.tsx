@@ -1,3 +1,4 @@
+import { useState } from "react";
 import FormNav from "../Footer/FormNav";
 import AddOnFormSection from "./FormSections/AddOnFormSection";
 import InfoFormSection from "./FormSections/InfoFormSection";
@@ -9,15 +10,27 @@ interface FormProps {
   setSelectedSection: (...args:any) => void;
 }
 
+
 const Form = ({ selectedSection, setSelectedSection }: FormProps) => {
+  
+  const [form, setForm] = useState({});
+  
+  const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value
+    });
+  }
 
   return (
     <main className="form-container">
       <section className="input-section-container">
-        <InfoFormSection/>
-        <PlanFormSection/>
-        <AddOnFormSection/>
-        <SummarySection/>
+        <form>
+          <InfoFormSection handleInput={handleInput}/>
+          <PlanFormSection/>
+          <AddOnFormSection/>
+          <SummarySection/>
+        </form>
       </section>
       <FormNav selectedSection={selectedSection} setSelectedSection={setSelectedSection}/>
     </main>
