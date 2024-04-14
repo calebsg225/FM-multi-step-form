@@ -35,4 +35,8 @@ nav .navbarItem .navItemText {
   display: none;
 }
 
+.form-container form h2 {
+  color: hsl(213, 96%, 18%);
+}
+
 /*# sourceMappingURL=index.css.map */

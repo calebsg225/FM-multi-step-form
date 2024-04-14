@@ -1,4 +1,12 @@
 .form-container {
-  .upper-form-container {}
-  .form-footer-navigation {}
+  form {
+    h2 {
+      color: $marine_blue;
+    }
+    .plan-form-section-container {
+      label {
+      }
+    }
+  }
+  .form-navigation {}
 }

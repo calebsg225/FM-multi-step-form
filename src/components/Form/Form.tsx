@@ -26,13 +26,14 @@ const Form = ({ selectedSection, setSelectedSection }: FormProps) => {
     <main className="form-container">
       <section className="input-section-container">
         <form>
-          <InfoFormSection handleInput={handleInput}/>
-          <PlanFormSection/>
+          <InfoFormSection handleInput={handleInput} isSelected={selectedSection === 1}/>
+          <PlanFormSection handleInput={handleInput} isSelected={selectedSection === 2}/>
           <AddOnFormSection/>
           <SummarySection/>
         </form>
       </section>
       <FormNav selectedSection={selectedSection} setSelectedSection={setSelectedSection}/>
+      {JSON.stringify(form)}
     </main>
   )
 }
