@@ -7,4 +7,32 @@ p {
   font-size: 16px;
 }
 
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+nav .navbarItem .selected {
+  color: hsl(213, 96%, 18%);
+  background-color: hsl(206, 94%, 87%);
+}
+nav .navbarItem .unselected {
+  color: hsl(206, 94%, 87%);
+}
+nav .navbarItem .navItemIcon {
+  font-weight: 700;
+  font-size: 14px;
+  border: 1px hsl(206, 94%, 87%) solid;
+  border-radius: 50%;
+  width: 2rem;
+  aspect-ratio: 1/1;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+nav .navbarItem .navItemText {
+  display: none;
+}
+
 /*# sourceMappingURL=index.css.map */

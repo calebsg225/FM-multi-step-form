@@ -1,1 +1,33 @@
-.top-navigation {}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  .navbarItem {
+
+    .selected {
+      color: $marine_blue;
+      background-color: $light_blue;
+    }
+
+    .unselected {
+      color: $light_blue;
+    }
+
+    .navItemIcon {
+      font-weight: 700;
+      font-size: 14px;
+      border: 1px $light_blue solid;
+      border-radius: 50%;
+      width: 2rem;
+      aspect-ratio: 1/1;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .navItemText {
+      display: none;
+    }
+  }
+
+}

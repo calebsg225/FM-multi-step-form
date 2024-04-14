@@ -11,9 +11,14 @@ const NavBar = ({ selectedSection }: NavBarProps) => {
   const navItemNames = ["your info", "select plan", "add-ons", "summary"];
 
   return (
-    <header className="top-navigation">
-      {navItemNames.map((label, index) => <NavbarItem label={label} order={index+1} isSelected={index+1 === selectedSection} key={index}/> )}
-    </header>
+    <nav className="top-navigation">
+      {navItemNames.map((label, index) => <NavbarItem 
+        label={label} 
+        order={index+1} 
+        isSelected={index+1 === selectedSection} 
+        key={index}/> 
+      )}
+    </nav>
   )
 }
 

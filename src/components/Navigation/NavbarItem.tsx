@@ -6,13 +6,13 @@ interface NavbarItemProps {
 
 const NavbarItem = ({label, order, isSelected}: NavbarItemProps) => {
   return (
-    <nav className="NavbarItem">
-      <div className="navItemIcon"></div>
+    <div className="navbarItem">
+      <div className={`navItemIcon ${isSelected ? 'selected' : 'unselected'}`}>{order}</div>
       <div className="navItemText">
         <p>Step {order}</p>
         <p>{label.toUpperCase()}</p>
       </div>
-    </nav>
+    </div>
   )
 }
 
