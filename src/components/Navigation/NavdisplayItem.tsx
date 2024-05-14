@@ -4,9 +4,9 @@ interface NavbarItemProps {
   isSelected: boolean;
 }
 
-const NavbarItem = ({label, order, isSelected}: NavbarItemProps) => {
+const NavdisplayItem = ({label, order, isSelected}: NavbarItemProps) => {
   return (
-    <div className="navbarItem">
+    <div className="navdisplayItem">
       <div className={`navItemIcon ${isSelected ? 'selected' : 'unselected'}`}>{order}</div>
       <div className="navItemText">
         <p>Step {order}</p>
@@ -16,4 +16,4 @@ const NavbarItem = ({label, order, isSelected}: NavbarItemProps) => {
   )
 }
 
-export default NavbarItem
+export default NavdisplayItem

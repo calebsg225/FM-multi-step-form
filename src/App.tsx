@@ -1,4 +1,4 @@
-import NavBar from "./components/Navigation/NavBar";
+import NavDisplay from "./components/Navigation/NavDisplay";
 import Form from "./components/Form/Form";
 import { useState } from "react";
 
@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar selectedSection={selectedSection} />
+      <NavDisplay selectedSection={selectedSection} />
       <Form selectedSection={selectedSection} setSelectedSection={setSelectedSection}/>
     </div>
   );

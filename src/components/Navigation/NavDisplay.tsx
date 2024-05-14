@@ -1,18 +1,18 @@
 // navbar should not be interactive, just displays current section being viewed.
 
-import NavbarItem from "./NavbarItem";
+import NavdisplayItem from "./NavdisplayItem";
 
 interface NavBarProps {
   selectedSection: number;
 }
 
-const NavBar = ({ selectedSection }: NavBarProps) => {
+const NavDisplay = ({ selectedSection }: NavBarProps) => {
 
   const navItemNames = ["your info", "select plan", "add-ons", "summary"];
 
   return (
     <nav className="top-navigation">
-      {navItemNames.map((label, index) => <NavbarItem 
+      {navItemNames.map((label, index) => <NavdisplayItem 
         label={label} 
         order={index+1} 
         isSelected={index+1 === selectedSection} 
@@ -22,4 +22,4 @@ const NavBar = ({ selectedSection }: NavBarProps) => {
   )
 }
 
-export default NavBar
+export default NavDisplay

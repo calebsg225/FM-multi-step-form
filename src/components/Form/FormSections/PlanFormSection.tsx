@@ -5,9 +5,10 @@
 interface PlanFormSectionProps {
   handleInput: (e: React.ChangeEvent<HTMLInputElement>) => void;
   isSelected: boolean;
+  form: {[key: string]: string}
 }
 
-const PlanFormSection = ({handleInput, isSelected}: PlanFormSectionProps) => {
+const PlanFormSection = ({handleInput, isSelected, form}: PlanFormSectionProps) => {
   return isSelected ? (
     <div className="plan-form-section-container">
       <h2>Select your plan</h2>

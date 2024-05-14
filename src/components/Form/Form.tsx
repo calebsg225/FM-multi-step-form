@@ -1,3 +1,6 @@
+// generate form here
+// contains all form entry sections
+
 import { useState } from "react";
 import FormNav from "../Footer/FormNav";
 import AddOnFormSection from "./FormSections/AddOnFormSection";
@@ -26,14 +29,14 @@ const Form = ({ selectedSection, setSelectedSection }: FormProps) => {
     <main className="form-container">
       <section className="input-section-container">
         <form>
-          <InfoFormSection handleInput={handleInput} isSelected={selectedSection === 1}/>
-          <PlanFormSection handleInput={handleInput} isSelected={selectedSection === 2}/>
+          <InfoFormSection handleInput={handleInput} isSelected={selectedSection === 1} form={form}/>
+          <PlanFormSection handleInput={handleInput} isSelected={selectedSection === 2} form={form}/>
           <AddOnFormSection/>
           <SummarySection/>
         </form>
       </section>
       <FormNav selectedSection={selectedSection} setSelectedSection={setSelectedSection}/>
-      {JSON.stringify(form)}
+      {JSON.stringify(form, null, 2)}
     </main>
   )
 }

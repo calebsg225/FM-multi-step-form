@@ -12,14 +12,14 @@ nav {
   align-items: center;
   justify-content: space-evenly;
 }
-nav .navbarItem .selected {
+nav .navdisplayItem .selected {
   color: hsl(213, 96%, 18%);
   background-color: hsl(206, 94%, 87%);
 }
-nav .navbarItem .unselected {
+nav .navdisplayItem .unselected {
   color: hsl(206, 94%, 87%);
 }
-nav .navbarItem .navItemIcon {
+nav .navdisplayItem .navItemIcon {
   font-weight: 700;
   font-size: 14px;
   border: 1px hsl(206, 94%, 87%) solid;
@@ -31,7 +31,7 @@ nav .navbarItem .navItemIcon {
   justify-content: center;
   flex-direction: column;
 }
-nav .navbarItem .navItemText {
+nav .navdisplayItem .navItemText {
   display: none;
 }
 
